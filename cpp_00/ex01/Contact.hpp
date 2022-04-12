@@ -14,8 +14,6 @@ private:
 	std::string	darkestSecret;
 
 public:
-	Contact();
-	virtual ~Contact();
 	std::string	getFirstName();
 	std::string	getLastName();
 	std::string	getPhoneNumber();
