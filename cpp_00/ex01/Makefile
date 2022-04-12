@@ -6,7 +6,7 @@ all: $(FILES)
 	g++ $(FLAGS) $(FILES) -o $(NAME)
 
 clean:
-	rm -rf $(FILES=.c:.o)
+	rm -rf $(FILES:.cpp=.o)
 
 fclean: clean
 	rm -rf $(NAME)
