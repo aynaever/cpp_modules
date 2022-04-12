@@ -22,9 +22,12 @@ void	PhoneBook::display()
 	while (i < counter)
 	{
 		std::cout << "|    " << this->counter << "     |";
-		std::cout << this->contacts[i].getFirstName() << "|";
-		std::cout << this->contacts[i].getLastName() << "|";
-		std::cout << this->contacts[i].getNickName() << "|";
+		this->contacts[i].printFirstName();
+		std::cout << "|";
+		this->contacts[i].printLastName();
+		std::cout << "|";
+		this->contacts[i].printNickName();
+		std::cout << "|" << std::endl;
 		i++;
 	}
 }

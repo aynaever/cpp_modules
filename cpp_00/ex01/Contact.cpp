@@ -1,29 +1,58 @@
 #include	"Contact.hpp"
 
-
-std::string	Contact::getFirstName()
+void	Contact::printFirstName()
 {
-	return (firstName);
+	if (firstName.size() <= 10)
+	{
+		std::cout << std::setw(10);
+		std::cout << firstName;
+	}
+	else
+		std::cout << firstName.substr(0, 9) << ".";
 }
 
-std::string	Contact::getLastName()
+void	Contact::printLastName()
 {
-	return	(lastName);
+	if (lastName.size() <= 10)
+	{
+		std::cout << std::setw(10);
+		std::cout << lastName;
+	}
+	else
+		std::cout << lastName.substr(0, 9) << ".";
 }
 
-std::string	Contact::getPhoneNumber()
+void	Contact::printPhoneNumber()
 {
-	return	(phoneNumber);
+	if (phoneNumber.size() <= 10)
+	{
+		std::cout << std::setw(10);
+		std::cout << phoneNumber;
+	}
+	else
+		std::cout << phoneNumber.substr(0, 9) << ".";
 }
 
-std::string	Contact::getNickName()
+void	Contact::printNickName()
 {
-	return	(nickName);
+	if (nickName.size() <= 10)
+	{
+		std::cout << std::setw(10);
+		std::cout << nickName;
+	}
+	else
+		std::cout << nickName.substr(0, 9) << ".";
 }
 
-std::string	Contact::getDarkestSecret()
+void	Contact::printdarkestSecret()
 {
-	return	(darkestSecret);
+	if (darkestSecret.size() <= 10)
+	{
+		std::cout << std::setw(10);
+		std::cout << darkestSecret;
+	}
+	else
+		std::cout << darkestSecret.substr(0, 9) << ".";
 }
 
 void	Contact::setFirstName(std::string firstName)
