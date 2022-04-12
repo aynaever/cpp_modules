@@ -1,8 +1,8 @@
-#include	<Contact.hpp>
+#include	"Contact.hpp"
 
 std::string	Contact::getFirstName()
 {
-	return firstName;
+	return (firstName);
 }
 
 std::string	Contact::getLastName()
@@ -27,25 +27,25 @@ std::string	Contact::getDarkestSecret()
 
 void	Contact::setFirstName(std::string firstName)
 {
-	firstName = firstName;
+	this->firstName = firstName;
 }
 
 void	Contact::setLastName(std::string lastName)
 {
-	 lastName = lastName;
+	 this->lastName = lastName;
 }
 
 void	Contact::setPhoneNumber(std::string phoneNumber)
 {
-	 phoneNumber = phoneNumber;
+	 this->phoneNumber = phoneNumber;
 }
 
 void	Contact::setNickName(std::string nickName)
 {
-	nickName = nickName;
+	this->nickName = nickName;
 }
 
 void	Contact::setDarkestSecret(std::string darkestSecret)
 {
-	darkestSecret = darkestSecret;
+	this->darkestSecret = darkestSecret;
 }
