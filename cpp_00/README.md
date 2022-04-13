@@ -8,6 +8,7 @@ This cpp module introduces the following topics: Namespaces, classes, member fun
 
 ## ex00
 This program, converts arguments from the command line to UpperCase.
+
 ![ex00_image](./screenshots/ex00.png)
 
 ## ex01
@@ -17,6 +18,8 @@ This program has the following commands:
 - ADD : to add a new contact.
 - SEARCH : to display current contacts.
 - EXIT : to exit the program.
+
+![ex01_image](./screenshots/ex01.png)
 
 ## ex02
 
