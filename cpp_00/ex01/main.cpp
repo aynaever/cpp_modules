@@ -6,10 +6,13 @@ int main(void)
 	PhoneBook	myBook;
 	std::string	command;
 
+	std::cout << "================================================" << std::endl;
 	std::cout << "Welcome to the 80's!" << std::endl;
-	std::cout << "Commands Available :" << std::endl;
+	std::cout << "================================================" << std::endl;
+	std::cout << "=========== Commands Available =================" << std::endl;
 	std::cout << "ADD : to add a new contact" << std::endl;
 	std::cout << "SEARCH : to diplsay available contacts" << std::endl;
+	std::cout << "================================================" << std::endl;
 
 	do {
 		std::cout << "Enter Command :";
