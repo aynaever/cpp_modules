@@ -19,6 +19,9 @@ In this exercice, we need to determine in what case it's better to allocate the 
 In this exercice, we need to allocate N Objects in a single allocation, and to write a main to test it, and to free the dynamic allocation after we are done with it.
 
 ## ex02
+
+In this exercice, we will play with references and pointers.
+
 ## ex03
 ## ex04
 ## ex05
