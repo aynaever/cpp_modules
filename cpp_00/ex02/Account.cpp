@@ -40,7 +40,9 @@ Account::Account ( void )
 Account::~Account ( void )
 {
 	timestamp();
-	std::cout << "de" << std::endl;
+	std::cout << "index:" << _accountIndex
+			<< ";amount:" << _amount
+			<< ";closed" << std::endl;
 }
 
 int	Account::getNbAccounts( void )
@@ -74,6 +76,12 @@ void Account::displayAccountsInfos( void )
 
 void Account::makeDeposit( int deposit )
 {
+	timestamp();
+	std::cout << "index:" << _accountIndex
+			<< ";p_amount:" << _amount
+			<< ";deposit:" << deposit
+			<< ";amount:" << (_amount + deposit)
+			<< ";nb_deposits:" << _nbDeposits << std::endl;
 	_amount += deposit;
 	_totalAmount += deposit;
 	_totalNbDeposits++;
