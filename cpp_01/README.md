@@ -23,6 +23,9 @@ In this exercice, we need to allocate N Objects in a single allocation, and to w
 In this exercice, we will play with references and pointers.
 
 ## ex03
+
+In this exercice, we need to the best case to pass the object by reference or by a pointer.
+
 ## ex04
 ## ex05
 ## ex06
