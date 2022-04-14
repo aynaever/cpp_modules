@@ -15,6 +15,9 @@ This cpp module introduces the following topics: Memory allocation, pointers to 
 In this exercice, we need to determine in what case it's better to allocate the objects on the stack or the heap.
 
 ## ex01
+
+In this exercice, we need to allocate N Objects in a single allocation, and to write a main to test it, and to free the dynamic allocation after we are done with it.
+
 ## ex02
 ## ex03
 ## ex04
