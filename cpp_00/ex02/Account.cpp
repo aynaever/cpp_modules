@@ -17,7 +17,12 @@ int Account::_totalAmount = 0;
 
 void timestamp( void )
 {
-	std::cout << "[19920104_091532]";
+	char buff[16];
+	time_t t = time(NULL);
+
+	struct tm* tm = localtime(&t);
+	strftime(buff, sizeof(buff), "%Y%m%d_%H%M%S", tm);
+	printf("[%s]", buff);
 }
 
 Account::Account ( int deposit )
