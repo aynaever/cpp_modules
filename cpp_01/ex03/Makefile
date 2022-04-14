@@ -6,7 +6,7 @@
 
 NAME = main
 FLAGS = -Wall -Wextra -Werror -std=c++98
-FILES = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+FILES = main.cpp Weapon.cpp HumanA.cpp  HumanB.cpp
 OBJ = $(FILES:.cpp=.o)
 
 all: $(OBJ)
