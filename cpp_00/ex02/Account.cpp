@@ -75,6 +75,8 @@ void Account::displayAccountsInfos( void )
 void Account::makeDeposit( int deposit )
 {
 	_amount += deposit;
+	_totalAmount += deposit;
+	_totalNbDeposits++;
 }
 
 bool Account::makeWithdrawal( int withdrawal )
@@ -82,6 +84,8 @@ bool Account::makeWithdrawal( int withdrawal )
 	if (_amount >= withdrawal)
 	{
 		_amount -= withdrawal;
+		_totalNbWithdrawals++;
+		_totalAmount -= withdrawal;
 		return (1);
 	}
 	else
