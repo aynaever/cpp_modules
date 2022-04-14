@@ -11,6 +11,9 @@ This cpp module introduces the following topics: Memory allocation, pointers to 
 * [ex06](#ex06)
 
 ## ex00
+
+In this exercice, we need to determine in what case it's better to allocate the objects on the stack or the heap.
+
 ## ex01
 ## ex02
 ## ex03
