@@ -77,6 +77,7 @@ void Account::displayAccountsInfos( void )
 void Account::makeDeposit( int deposit )
 {
 	timestamp();
+	_nbDeposits++;
 	std::cout << "index:" << _accountIndex
 			<< ";p_amount:" << _amount
 			<< ";deposit:" << deposit
@@ -121,6 +122,6 @@ void Account::displayStatus( void ) const
 	timestamp();
 	std::cout << "index:" << _accountIndex
 			<< ";amount:" << _amount
-			<< ";deposits:" << _totalNbDeposits
-			<< ";withdrawals:" << _totalNbWithdrawals << std::endl;
+			<< ";deposits:" << _nbDeposits
+			<< ";withdrawals:" << _nbWithdrawals << std::endl;
 }
