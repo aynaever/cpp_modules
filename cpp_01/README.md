@@ -27,5 +27,8 @@ In this exercice, we will play with references and pointers.
 In this exercice, we need to the best case to pass the object by reference or by a pointer.
 
 ## ex04
+
+In this exercice, we will code a program that replaces strings in a file, like sed.
+
 ## ex05
 ## ex06
