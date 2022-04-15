@@ -13,7 +13,7 @@ void	copy_to_str( std::string* str, char* file)
 	int				length;
 	std::ifstream	ifs;
 
-	/* Opennign the file in input mode */
+	/* Openning the file in input mode */
 	ifs.open (file, std::ifstream::in);
 
 	/* getting the length of the file */
@@ -33,4 +33,23 @@ void	copy_to_str( std::string* str, char* file)
 
 	/* close the stream */
 	ifs.close();
+}
+
+void	replace( std::string* str, std::string s1, std::string s2 )
+{
+	int	len1;
+	int	index;
+	int	pos;
+
+	len1 = s1.size();
+	pos  = 0;
+
+	do {
+		index = str->find(s1, pos);
+		if ( index == -1 )
+			break;
+		str->erase(index, len1);
+		str->insert(index, s2);
+		pos += index;
+	} while ( index != -1 );
 }

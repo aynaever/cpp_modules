@@ -5,7 +5,7 @@
 # Last Modified By  : Aymane N <anaouadi@students.42wolfsburg.de>
 
 NAME = main
-FLAGS = -Wall -Wextra -Werror -std=c++98
+FLAGS = -Wall -Wextra -Werror -std=c++98 -g
 FILES = main.cpp helpers.cpp
 OBJ = $(FILES:.cpp=.o)
 

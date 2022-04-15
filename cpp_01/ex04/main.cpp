@@ -6,14 +6,17 @@
  * Last Modified By  : Aymane N <anaouadi@students.42wolfsburg.de>
  */
 
-#include	<iostream>
-#include	<fstream>
 #include	"helpers.hpp"
 
 int main (int	argc, char** argv) {
+
+	if ( argc != 4 )
+		return	(0);
+
 	std::string	str;
 
 	copy_to_str(&str, argv[1]);
+	replace(&str, argv[2], argv[3]);
 
 	std::cout << str << std::endl;
 	return (0);
