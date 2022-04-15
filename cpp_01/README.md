@@ -31,4 +31,7 @@ In this exercice, we need to the best case to pass the object by reference or by
 In this exercice, we will code a program that replaces strings in a file, like sed.
 
 ## ex05
+
+In this exercice, we will code a program to complain depending on the level, using pointers to member functions.
+
 ## ex06
