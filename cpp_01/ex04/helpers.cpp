@@ -45,11 +45,15 @@ void	replace( std::string* str, std::string s1, std::string s2 )
 	pos  = 0;
 
 	do {
+		/* getting the index of the first occurence starting from pos */
 		index = str->find(s1, pos);
+		/* checking if there an occurence of s1 */
 		if ( index == -1 )
 			break;
+		/* replace by first erasing the s1 and then inserting s2 */
 		str->erase(index, len1);
 		str->insert(index, s2);
+		/* updating the pos */
 		pos += index;
 	} while ( index != -1 );
 }

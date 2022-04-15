@@ -10,7 +10,6 @@
 #define HELPERS_HPP
 
 #include	<iostream>
-#include	<iostream>
 #include	<fstream>
 
 void	copy_to_str( std::string* buff, char* file);

@@ -8,7 +8,13 @@
 
 #include	"helpers.hpp"
 
-int main (int	argc, char** argv) {
+int main (int	argc, char** argv)
+{
+	std::ofstream	ofs;
+	std::string		rfile;
+
+	rfile.assign(argv[1]).append(".replace");
+	ofs.open(rfile.c_str());
 
 	if ( argc != 4 )
 		return	(0);
@@ -17,6 +23,8 @@ int main (int	argc, char** argv) {
 
 	copy_to_str(&str, argv[1]);
 	replace(&str, argv[2], argv[3]);
+
+	ofs.write(str.c_str(), str.size());
 
 	std::cout << str << std::endl;
 	return (0);
