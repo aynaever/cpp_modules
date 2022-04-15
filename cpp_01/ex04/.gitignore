@@ -1,5 +1,6 @@
 test.txt
 test.txt.replace
 *.o
+*.replace
 main
 
