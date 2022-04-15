@@ -11,6 +11,7 @@
 
 #include	<iostream>
 #include	<fstream>
+#include	<ios>
 
 void	copy_to_str( std::string* buff, char* file);
 void	replace( std::string* str, std::string s1, std::string s2 );

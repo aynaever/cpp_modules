@@ -22,6 +22,11 @@ void	copy_to_str( std::string* str, char* file)
 	ifs.seekg(0, ifs.beg);
 
 	/* allocating the length of the file for buffer to copy file into it */
+	if ( length == -1 )
+	{
+		throw -1;
+		return ;
+	}
 	char* buff = new char[length];
 
 	/* copy file to buffer and then assign it to string object */
@@ -45,15 +50,20 @@ void	replace( std::string* str, std::string s1, std::string s2 )
 	pos  = 0;
 
 	do {
+
 		/* getting the index of the first occurence starting from pos */
 		index = str->find(s1, pos);
+
 		/* checking if there an occurence of s1 */
 		if ( index == -1 )
 			break;
+
 		/* replace by first erasing the s1 and then inserting s2 */
 		str->erase(index, len1);
 		str->insert(index, s2);
+
 		/* updating the pos */
 		pos += index;
+
 	} while ( index != -1 );
 }

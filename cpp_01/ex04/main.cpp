@@ -7,25 +7,43 @@
  */
 
 #include	"helpers.hpp"
+#include	<cstdlib>
 
 int main (int	argc, char** argv)
 {
 	std::ofstream	ofs;
+	std::string		str;
 	std::string		rfile;
 
+	/* Check validity of arguments */
+	if ( argc != 4 )
+	{
+		std::cout << "Enter three arguments as follows: <filename> \"String1\" \"String2\" "
+				<< std::endl;
+		return	(0);
+	}
+
+	/* copy string from file and then replace s1 to s2 */
+	try
+	{
+		copy_to_str(&str, argv[1]);
+		replace(&str, argv[2], argv[3]);
+	}
+	catch (int x)
+	{
+		std::cout << "Please Check the file" << std::endl;
+		exit(0);
+	}
+
+	/* create .replace file */
 	rfile.assign(argv[1]).append(".replace");
 	ofs.open(rfile.c_str());
 
-	if ( argc != 4 )
-		return	(0);
-
-	std::string	str;
-
-	copy_to_str(&str, argv[1]);
-	replace(&str, argv[2], argv[3]);
-
+	/* write replaced string to .replace file */
 	ofs.write(str.c_str(), str.size());
 
-	std::cout << str << std::endl;
+	/* close stream */
+	ofs.close();
+
 	return (0);
 }
