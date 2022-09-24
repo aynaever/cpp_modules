@@ -1,81 +1,61 @@
+/**
+ * File              : Contact.cpp
+ * Author            : Aymane N <anaouadi@students.42wolfsburg.de>
+ * Date              : 24.09.2022
+ * Last Modified Date: 24.09.2022
+ * Last Modified By  : Aymane N <anaouadi@students.42wolfsburg.de>
+ */
+
 #include	"Contact.hpp"
+#include	<string>
+using	namespace std;
 
-void	Contact::printFirstName()
-{
-	if (firstName.size() <= 10)
-	{
-		std::cout << std::setw(10);
-		std::cout << firstName;
-	}
-	else
-		std::cout << firstName.substr(0, 9) << ".";
-}
-
-void	Contact::printLastName()
-{
-	if (lastName.size() <= 10)
-	{
-		std::cout << std::setw(10);
-		std::cout << lastName;
-	}
-	else
-		std::cout << lastName.substr(0, 9) << ".";
-}
-
-void	Contact::printPhoneNumber()
-{
-	if (phoneNumber.size() <= 10)
-	{
-		std::cout << std::setw(10);
-		std::cout << phoneNumber;
-	}
-	else
-		std::cout << phoneNumber.substr(0, 9) << ".";
-}
-
-void	Contact::printNickName()
-{
-	if (nickName.size() <= 10)
-	{
-		std::cout << std::setw(10);
-		std::cout << nickName;
-	}
-	else
-		std::cout << nickName.substr(0, 9) << ".";
-}
-
-void	Contact::printdarkestSecret()
-{
-	if (darkestSecret.size() <= 10)
-	{
-		std::cout << std::setw(10);
-		std::cout << darkestSecret;
-	}
-	else
-		std::cout << darkestSecret.substr(0, 9) << ".";
-}
-
-void	Contact::setFirstName(std::string firstName)
+void	Contact::setFirstName(string firstName)
 {
 	this->firstName = firstName;
 }
 
-void	Contact::setLastName(std::string lastName)
+void	Contact::setLastName(string lastName)
 {
-	 this->lastName = lastName;
+	this->lastName = lastName;
 }
 
-void	Contact::setPhoneNumber(std::string phoneNumber)
-{
-	 this->phoneNumber = phoneNumber;
-}
-
-void	Contact::setNickName(std::string nickName)
+void	Contact::setNickName(string nickName)
 {
 	this->nickName = nickName;
 }
 
-void	Contact::setDarkestSecret(std::string darkestSecret)
+void	Contact::setPhoneNumber(string phoneNumber)
+{
+	this->phoneNumber = phoneNumber;
+}
+
+void	Contact::setDarkestSecret(string darkestSecret)
 {
 	this->darkestSecret = darkestSecret;
+}
+
+string	Contact::getFirstName(string firstName)
+{
+	return (this->firstName);
+}
+
+string	Contact::getLastName(string lastName)
+{
+	return (this->lastName);
+}
+
+string	Contact::getNickName(string nickName)
+{
+	return (this->nickName);
+}
+
+string	Contact::getPhoneNumber(string phoneNumber)
+{
+	return (this->phoneNumber);
+}
+
+string	Contact::getDarkestSecret(string darkestSecret)
+{
+	return (this->darkestSecret);
 }

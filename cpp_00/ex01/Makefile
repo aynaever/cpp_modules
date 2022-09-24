@@ -1,14 +1,25 @@
-NAME = phonebook
-FLAGS = -Wall -Werror -Wextra -std=c++98
-FILES = Contact.cpp PhoneBook.cpp main.cpp
+# File              : Makefile
+# Author            : Aymane N <anaouadi@students.42wolfsburg.de>
+# Date              : 24.09.2022
+# Last Modified Date: 24.09.2022
+# Last Modified By  : Aymane N <anaouadi@students.42wolfsburg.de>
 
-all: $(FILES)
-	g++ $(FLAGS) $(FILES) -o $(NAME)
+NAME = main
+CFILES = main.cpp  PhoneBook.cpp Contact.cpp
+FLAGS = -Wall -Werror -Wextra -std=c++98
+
+all:
+	c++ $(CFILES) -o $(NAME)
+
+run: all
+	./$(NAME)
 
 clean:
-	rm -rf $(FILES:.cpp=.o)
+	rm -rf *.o
 
 fclean: clean
 	rm -rf $(NAME)
 
-.PHONY: all clean fclean
+re: fclean all
+
+.PHONY: clean fclean re all
