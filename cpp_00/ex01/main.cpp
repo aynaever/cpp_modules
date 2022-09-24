@@ -1,7 +1,6 @@
 #include	"PhoneBook.hpp"
 #include	"Contact.hpp"
 #include	<iostream>
-#include	<cctype>
 void	printProgramInfo();
 
 
