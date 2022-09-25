@@ -27,11 +27,11 @@ public:
 	void	setNickName(string nickName);
 	void	setPhoneNumber(string phoneNumber);
 	void	setDarkestSecret(string darkestSecret);
-	string	getFirstName(string firstName);
-	string	getLastName(string lastName);
-	string	getNickName(string nickName);
-	string	getPhoneNumber(string phoneNumber);
-	string	getDarkestSecret(string darkestSecret);
+	string	getFirstName();
+	string	getLastName();
+	string	getNickName();
+	string	getPhoneNumber();
+	string	getDarkestSecret();
 };
 
 #endif

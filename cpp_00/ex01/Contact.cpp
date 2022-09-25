@@ -35,27 +35,27 @@ void	Contact::setDarkestSecret(string darkestSecret)
 	this->darkestSecret = darkestSecret;
 }
 
-string	Contact::getFirstName(string firstName)
+string	Contact::getFirstName()
 {
 	return (this->firstName);
 }
 
-string	Contact::getLastName(string lastName)
+string	Contact::getLastName()
 {
 	return (this->lastName);
 }
 
-string	Contact::getNickName(string nickName)
+string	Contact::getNickName()
 {
 	return (this->nickName);
 }
 
-string	Contact::getPhoneNumber(string phoneNumber)
+string	Contact::getPhoneNumber()
 {
 	return (this->phoneNumber);
 }
 
-string	Contact::getDarkestSecret(string darkestSecret)
+string	Contact::getDarkestSecret()
 {
 	return (this->darkestSecret);
 }

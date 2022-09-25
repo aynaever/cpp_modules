@@ -23,6 +23,7 @@ public:
 	PhoneBook();
 	void	add(Contact contact);
 	void	printContacts();
+	void	printContact(int index);
 };
 
 #endif
