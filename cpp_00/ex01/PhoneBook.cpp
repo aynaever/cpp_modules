@@ -56,5 +56,11 @@ void	PhoneBook::add(Contact contact)
 
 void	PhoneBook::printContacts()
 {
-	std::cout << "Number of contacts : " << this->counter << std::endl;
+	std::cout	<< "-----------------------------------------" << std::endl;
+	std::cout	<< std::setw(10) << "index|"
+				<< std::setw(10) << "first name|"
+				<< std::setw(10) << "last name|"
+				<< std::setw(10) << "nickname|"
+				<< std::endl;
+	std::cout	<< "-----------------------------------------" << std::endl;
 }
