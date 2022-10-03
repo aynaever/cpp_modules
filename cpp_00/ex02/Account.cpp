@@ -5,25 +5,36 @@ int	Account::_totalAmount = 0;
 int	Account::_totalNbDeposits = 0;
 int	Account::_totalNbWithdrawals = 0;
 
+/* getter function for _nbAccounts */
 int	Account::getNbAccounts( void )
 {
 	return (_nbAccounts);
 }
 
+/* getter function for _totalAmount */
 int	Account::getTotalAmount( void )
 {
 	return (_totalAmount);
 }
 
+/* getter function for _totalNbDeposits */
 int	Account::getNbDeposits( void )
 {
 	return (_totalNbDeposits);
 }
 
+/* getter function for _totalNbWithdrawals */
 int	Account::getNbWithdrawals( void )
 {
 	return (_totalNbWithdrawals);
 }
+
+/* function to return amount of the account */
+int		Account::checkAmount( void ) const
+{
+	return (this->_amount);
+}
+
 
 /* makeDeposit function, increases the amount with deposit, and update some other vars */
 void	Account::makeDeposit( int deposit )
@@ -63,11 +74,6 @@ bool	Account::makeWithdrawal( int withdrawal )
 					<< std::endl;
 		return (false);
 	}
-}
-
-int		Account::checkAmount( void ) const
-{
-	return (this->_amount);
 }
 
 /* function to display about each account, like : index, amount, deposists, withdrawals */
