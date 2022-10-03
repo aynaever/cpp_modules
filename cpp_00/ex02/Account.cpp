@@ -65,8 +65,10 @@ void	Account::displayAccountsInfos( void )
 Account::Account ( int initial_deposit )
 {
 	this->_amount = initial_deposit;
+	std::cout << "Account created" << std::endl;
 }
 
 Account::~Account ( )
 {
+	std::cout << "Account destroyed" << std::endl;
 }
