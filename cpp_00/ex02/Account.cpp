@@ -25,6 +25,7 @@ int	Account::getNbWithdrawals( void )
 	return (_totalNbWithdrawals);
 }
 
+/* makeDeposit function, increases the amount with deposit, and update some other vars */
 void	Account::makeDeposit( int deposit )
 {
 	_nbDeposits++;
@@ -38,20 +39,30 @@ void	Account::makeDeposit( int deposit )
 	_amount += deposit;
 }
 
+/* makeWithdrawal function to decrease withdrawal from amount if it's possible */
 bool	Account::makeWithdrawal( int withdrawal )
 {
 	if ( this->_amount >= withdrawal )
 	{
-		this->_amount -= withdrawal;
 		this->_nbWithdrawals++;
 		_totalNbWithdrawals++;
+		std::cout	<< "index:" + std::to_string(Account::_accountIndex) + ";"
+					<< "p_amount:" + std::to_string(this->_amount) + ";"
+					<< "withdrawal:" + std::to_string(withdrawal) + ";"
+					<< "amount:" + std::to_string(this->_amount + withdrawal) + ";"
+					<< "nb_withdrawals:" + std::to_string(this->_nbWithdrawals)
+					<< std::endl;
+		this->_amount -= withdrawal;
 		return (true);
 	}
 	else
 	{
+		std::cout	<< "index:" + std::to_string(Account::_accountIndex) + ";"
+					<< "p_amount:" + std::to_string(this->_amount) + ";"
+					<< "withdrawal:refused"
+					<< std::endl;
 		return (false);
 	}
-	std::cout << "withdrawal function called" << std::endl;
 }
 
 int		Account::checkAmount( void ) const
