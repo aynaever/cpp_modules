@@ -57,6 +57,7 @@ void	Account::displayStatus( void ) const
 	std::cout << "status" << std::endl;
 }
 
+/* dipslay infos about all accounts, like : total amount, deposits, withdrawals, number of accounts */
 void	Account::displayAccountsInfos( void )
 {
 	std::cout <<	"accounts:" + std::to_string(Account::_nbAccounts) + ";"
@@ -65,16 +66,19 @@ void	Account::displayAccountsInfos( void )
 					"withdrawals:" + std::to_string(getNbWithdrawals()) << std::endl;
 }
 
+/* Constructor of Account, it gets called when the object gets created */
 Account::Account ( int initial_deposit )
 {
 	this->_amount = initial_deposit;
 	this->_totalAmount += _amount;
 	Account::_nbAccounts++;
+
 	std::cout	<< "index:" + std::to_string(Account::_accountIndex) + ";"
 				<< "amount:" + std::to_string(this->_amount) + ";"
 				<< "created" << std::endl;
 }
 
+/* Deconstructor, it gets called when the scope of the object ends */
 Account::~Account ( )
 {
 	std::cout	<< "index:" + std::to_string(Account::_accountIndex) + ";"
