@@ -62,7 +62,7 @@ void	Account::displayAccountsInfos( void )
 	std::cout <<	"accounts:" + std::to_string(Account::_nbAccounts) + ";"
 					"total:" + std::to_string(Account::_totalAmount) + ";"
 					"deposists:" + std::to_string(getNbDeposits()) + ";"
-					"withdrawals:" + std::to_string(getNbWithdrawals()) + ";" << std::endl;
+					"withdrawals:" + std::to_string(getNbWithdrawals()) << std::endl;
 }
 
 Account::Account ( int initial_deposit )
@@ -70,7 +70,9 @@ Account::Account ( int initial_deposit )
 	this->_amount = initial_deposit;
 	this->_totalAmount += _amount;
 	Account::_nbAccounts++;
-	std::cout << "Account created" << std::endl;
+	std::cout	<< "index:" + std::to_string(Account::_accountIndex) + ";"
+				<< "amount:" + std::to_string(this->_amount) + ";"
+				<< "created" << std::endl;
 }
 
 Account::~Account ( )
