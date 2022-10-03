@@ -25,3 +25,7 @@ This program has the following commands:
 In this exercice, from a log and header file. We need to implement the Account.cpp file that the dev team deleted it by accident, and to make sure everything is correct. We need to get the same output as the log file except for the timestamps.
 
 ![ex02_image](./screenshots/ex02.png)
+
+## Resources
+* https://cplusplus.com/reference/ctime/tm/
+* https://cplusplus.com/reference/iomanip/setfill/
