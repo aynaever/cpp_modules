@@ -54,7 +54,11 @@ int		Account::checkAmount( void ) const
 
 void	Account::displayStatus( void ) const
 {
-	std::cout << "status" << std::endl;
+	std::cout	<< "index:" + std::to_string(this->_accountIndex) + ";"
+				<< "amount:" + std::to_string(this->_amount) + ";"
+				<< "deposists:" + std::to_string(this->_nbDeposits) + ";"
+				<< "withdrawals:" + std::to_string(this->_nbWithdrawals)
+				<< std::endl;
 }
 
 /* dipslay infos about all accounts, like : total amount, deposits, withdrawals, number of accounts */
@@ -71,6 +75,7 @@ Account::Account ( int initial_deposit )
 {
 	this->_amount = initial_deposit;
 	this->_totalAmount += _amount;
+	this->_accountIndex = _nbAccounts;
 	Account::_nbAccounts++;
 
 	std::cout	<< "index:" + std::to_string(Account::_accountIndex) + ";"
