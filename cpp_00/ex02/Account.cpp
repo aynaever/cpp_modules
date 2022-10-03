@@ -59,12 +59,13 @@ void	Account::displayStatus( void ) const
 
 void	Account::displayAccountsInfos( void )
 {
-	std::cout << "accounts infos" << std::endl;
+	std::cout << "accounts:" + std::to_string(Account::_nbAccounts) + ";" << std::endl;
 }
 
 Account::Account ( int initial_deposit )
 {
 	this->_amount = initial_deposit;
+	Account::_nbAccounts++;
 	std::cout << "Account created" << std::endl;
 }
 
