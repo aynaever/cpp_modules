@@ -59,7 +59,10 @@ void	Account::displayStatus( void ) const
 
 void	Account::displayAccountsInfos( void )
 {
-	std::cout << "accounts:" + std::to_string(Account::_nbAccounts) + ";" << std::endl;
+	std::cout <<	"accounts:" + std::to_string(Account::_nbAccounts) + ";"
+					"total:" + std::to_string(Account::_totalAmount) + ";"
+					"deposists:" + std::to_string(getNbDeposits()) + ";"
+					"withdrawals:" + std::to_string(getNbWithdrawals()) + ";" << std::endl;
 }
 
 Account::Account ( int initial_deposit )
