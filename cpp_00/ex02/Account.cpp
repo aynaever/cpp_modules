@@ -68,6 +68,7 @@ void	Account::displayAccountsInfos( void )
 Account::Account ( int initial_deposit )
 {
 	this->_amount = initial_deposit;
+	this->_totalAmount += _amount;
 	Account::_nbAccounts++;
 	std::cout << "Account created" << std::endl;
 }
