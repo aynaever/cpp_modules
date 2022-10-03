@@ -27,9 +27,15 @@ int	Account::getNbWithdrawals( void )
 
 void	Account::makeDeposit( int deposit )
 {
-	_amount += deposit;
 	_nbDeposits++;
 	_totalNbDeposits++;
+	std::cout	<< "index:" + std::to_string(Account::_accountIndex) + ";"
+				<< "p_amount:" + std::to_string(this->_amount) + ";"
+				<< "deposit:" + std::to_string(deposit) + ";"
+				<< "amount:" + std::to_string(this->_amount + deposit) + ";"
+				<< "nb_deposits:" + std::to_string(this->_nbDeposits)
+				<< std::endl;
+	_amount += deposit;
 }
 
 bool	Account::makeWithdrawal( int withdrawal )
@@ -45,6 +51,7 @@ bool	Account::makeWithdrawal( int withdrawal )
 	{
 		return (false);
 	}
+	std::cout << "withdrawal function called" << std::endl;
 }
 
 int		Account::checkAmount( void ) const
@@ -52,6 +59,7 @@ int		Account::checkAmount( void ) const
 	return (this->_amount);
 }
 
+/* function to display about each account, like : index, amount, deposists, withdrawals */
 void	Account::displayStatus( void ) const
 {
 	std::cout	<< "index:" + std::to_string(this->_accountIndex) + ";"
