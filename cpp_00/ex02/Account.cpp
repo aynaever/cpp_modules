@@ -77,5 +77,7 @@ Account::Account ( int initial_deposit )
 
 Account::~Account ( )
 {
-	std::cout << "Account destroyed" << std::endl;
+	std::cout	<< "index:" + std::to_string(Account::_accountIndex) + ";"
+				<< "amount:" + std::to_string(this->_amount) + ";"
+				<< "closed" << std::endl;
 }
