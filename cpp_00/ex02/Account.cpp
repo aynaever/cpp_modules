@@ -1,4 +1,6 @@
 #include	"Account.hpp"
+#include	<time.h>
+#include	<iomanip>
 
 int	Account::_nbAccounts = 0;
 int	Account::_totalAmount = 0;
@@ -35,12 +37,32 @@ int		Account::checkAmount( void ) const
 	return (this->_amount);
 }
 
+/* print time in form [yyyymmdd_hhmmss] */
+void	printTime()
+{
+	time_t	now;
+	tm		*gmtm;
+
+	time (&now);
+	gmtm = localtime(&now);
+	std::cout	<< "["
+				<< std::to_string(1900 + gmtm->tm_year)
+				<< std::setfill('0') << std::setw(2) << std::to_string(gmtm->tm_mon)
+				<< std::setfill('0') << std::setw(2) << std::to_string(gmtm->tm_mday)
+				<< "_"
+				<< std::setfill('0') << std::setw(2) << std::to_string(gmtm->tm_hour)
+				<< std::setfill('0') << std::setw(2) << std::to_string(gmtm->tm_min)
+				<< std::setfill('0') << std::setw(2) << std::to_string(gmtm->tm_sec)
+				<< "] ";
+}
+
 
 /* makeDeposit function, increases the amount with deposit, and update some other vars */
 void	Account::makeDeposit( int deposit )
 {
 	_nbDeposits++;
 	_totalNbDeposits++;
+	printTime();
 	std::cout	<< "index:" + std::to_string(Account::_accountIndex) + ";"
 				<< "p_amount:" + std::to_string(this->_amount) + ";"
 				<< "deposit:" + std::to_string(deposit) + ";"
@@ -57,6 +79,7 @@ bool	Account::makeWithdrawal( int withdrawal )
 	{
 		this->_nbWithdrawals++;
 		_totalNbWithdrawals++;
+		printTime();
 		std::cout	<< "index:" + std::to_string(Account::_accountIndex) + ";"
 					<< "p_amount:" + std::to_string(this->_amount) + ";"
 					<< "withdrawal:" + std::to_string(withdrawal) + ";"
@@ -68,6 +91,7 @@ bool	Account::makeWithdrawal( int withdrawal )
 	}
 	else
 	{
+		printTime();
 		std::cout	<< "index:" + std::to_string(Account::_accountIndex) + ";"
 					<< "p_amount:" + std::to_string(this->_amount) + ";"
 					<< "withdrawal:refused"
@@ -79,6 +103,7 @@ bool	Account::makeWithdrawal( int withdrawal )
 /* function to display about each account, like : index, amount, deposists, withdrawals */
 void	Account::displayStatus( void ) const
 {
+	printTime();
 	std::cout	<< "index:" + std::to_string(this->_accountIndex) + ";"
 				<< "amount:" + std::to_string(this->_amount) + ";"
 				<< "deposists:" + std::to_string(this->_nbDeposits) + ";"
@@ -89,6 +114,7 @@ void	Account::displayStatus( void ) const
 /* dipslay infos about all accounts, like : total amount, deposits, withdrawals, number of accounts */
 void	Account::displayAccountsInfos( void )
 {
+	printTime();
 	std::cout <<	"accounts:" + std::to_string(Account::_nbAccounts) + ";"
 					"total:" + std::to_string(Account::_totalAmount) + ";"
 					"deposists:" + std::to_string(getNbDeposits()) + ";"
@@ -103,6 +129,7 @@ Account::Account ( int initial_deposit )
 	this->_accountIndex = _nbAccounts;
 	Account::_nbAccounts++;
 
+	printTime();
 	std::cout	<< "index:" + std::to_string(Account::_accountIndex) + ";"
 				<< "amount:" + std::to_string(this->_amount) + ";"
 				<< "created" << std::endl;
@@ -111,6 +138,7 @@ Account::Account ( int initial_deposit )
 /* Deconstructor, it gets called when the scope of the object ends */
 Account::~Account ( )
 {
+	printTime();
 	std::cout	<< "index:" + std::to_string(Account::_accountIndex) + ";"
 				<< "amount:" + std::to_string(this->_amount) + ";"
 				<< "closed" << std::endl;
